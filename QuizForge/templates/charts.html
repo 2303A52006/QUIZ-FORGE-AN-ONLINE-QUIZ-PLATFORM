@@ -1,0 +1,1 @@
+{{ charts|json_script:'chartdata' }}<div class="chartgrid">{% for c in charts %}<section class="card"><h3>{{ c.name }}</h3>{% if c.labels %}<div class="plot"><canvas class="chart" data-index="{{ forloop.counter0 }}" aria-label="{{ c.name }}" role="img"></canvas></div>{% else %}<p>No scores yet. Completed attempts will appear here.</p>{% endif %}</section>{% endfor %}</div>
